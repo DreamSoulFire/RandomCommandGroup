@@ -6,7 +6,8 @@ CommandGroup:
   Example:
     #几率
     Chance: 50
-    Permission: ''
+    #权限
+    Permission: 'randomcommandgroup.run.example'
     #执行的指令
     # op 以op身份运行
     # console 以控制台身份运行
