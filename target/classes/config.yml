@@ -1,14 +1,20 @@
 #具体的指令
 #可无限增加
 CommandGroup:
+  #指令组id
   #例子
   Example:
     #几率
     Chance: 50
+    Permission: ''
     #执行的指令
     # op 以op身份运行
     # console 以控制台身份运行
     # player 以玩家身份运行
+    #可以使用延时
+    #例子:
+    #[op]heal <player>:20
+    # 20 代表着延时 1s
     Commands:
       - '[op]heal <player>'
     #成功时发送的信息 [不要可以直接删掉]
@@ -40,9 +46,11 @@ Special:
 Help:
   - '&7| &aRandomCommandGroup &7| &e插件帮助'
   - '&f/randomcommandgroup help &a插件主命令'
-  - '&f/randomcommandgroup run [指令组id] &a运行一个指令组'
+  - '&f/randomcommandgroup run [玩家] [指令组id] &a为指定玩家运行一个指令组'
   - '&f/randomcommandgroup reload &a重载插件'
-  - '&4PS&f: &e所有的 &brandomcommandgroup &e都可用 &arcg &e来代替'
+  - '&4PS&f: '
+  - '&e所有的 &brandomcommandgroup &e都可用 &arcg &e来代替'
+  - '&a[玩家] &e不填默认为&7指令使用者'
 #没有权限时发送的消息
 NoPermission:
   - '[message]&c你没有权利这么做'
