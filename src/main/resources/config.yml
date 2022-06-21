@@ -64,6 +64,3 @@ CantConsole:
 #参数错误时的消息
 ArgsNoEnough:
   - '[message]&c指令参数错误,请检查是否输错了指令'
-#配置文件出错时发送的消息
-FileError:
-  - '&7[&b系统&7]&c配置文件错误,请检查'
