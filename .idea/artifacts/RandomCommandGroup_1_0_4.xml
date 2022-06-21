@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RandomCommandGroup-1.0.4">
+    <output-path>$PROJECT_DIR$/out/artifacts/RandomCommandGroup_1_0_4</output-path>
+    <root id="archive" name="RandomCommandGroup-1.0.4.jar">
+      <element id="module-output" name="RandomCommandGroup" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

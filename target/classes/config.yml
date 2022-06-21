@@ -1,0 +1,60 @@
+#具体的指令
+#可无限增加
+CommandGroup:
+  #例子
+  Example:
+    #几率
+    Chance: 50
+    #执行的指令
+    # op 以op身份运行
+    # console 以控制台身份运行
+    # player 以玩家身份运行
+    Commands:
+      - '[op]heal <player>'
+    #成功时发送的信息 [不要可以直接删掉]
+    #消息设置与 FlameCore 一致
+    Success:
+      - ''
+    #失败时发送的信息 其余同上
+    Fail:
+      - ''
+
+#特殊设置
+Special:
+  #是否启用 [true 是|false 否]
+  Enable: false
+  #检测列表
+  #格式
+  #检测模式 词条 几率
+  #模式有
+  # permission 权限
+  # name 物品名字
+  # lore 物品lore
+  List:
+    - 'permission<->rcg.special.VIP<->3'
+    - 'name<->VIP专用道具<->1'
+    - 'lore<->很牛逼的东西<->3'
+
+#消息设置与 FlameCore 一致
+#帮助命令
+Help:
+  - '&7| &aRandomCommandGroup &7| &e插件帮助'
+  - '&f/randomcommandgroup help &a插件主命令'
+  - '&f/randomcommandgroup run [指令组id] &a运行一个指令组'
+  - '&f/randomcommandgroup reload &a重载插件'
+  - '&4PS&f: &e所有的 &brandomcommandgroup &e都可用 &arcg &e来代替'
+#没有权限时发送的消息
+NoPermission:
+  - '[message]&c你没有权利这么做'
+#重载插件时发送的消息
+Reload:
+  - '[message]&a插件重载成功'
+#控制台不可执行时发送的消息
+CantConsole:
+  - '[message]&c后台无法执行该指令'
+#参数错误时的消息
+ArgsNoEnough:
+  - '[message]&c指令参数错误,请检查是否输错了指令'
+#配置文件出错时发送的消息
+FileError:
+  - '&7[&b系统&7]&c配置文件错误,请检查'

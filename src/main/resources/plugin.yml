@@ -1,0 +1,10 @@
+name: RandomCommandGroup
+version: '1.0.5'
+main: dream.soulflame.randomcommandgroup.RandomCommandGroup
+authors: [ SoulFlame ]
+depend:
+  - FlameCore
+commands:
+  randomcommandgroup:
+    aliases:
+      - rcg
