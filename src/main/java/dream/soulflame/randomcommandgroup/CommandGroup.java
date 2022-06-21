@@ -25,9 +25,11 @@ public class CommandGroup {
             if (!key.equalsIgnoreCase(args)) continue;
             ConfigurationSection section = group.getConfigurationSection(key);
             double chance = section.getDouble("Chance", 0.0);
+            String permission = section.getString("Permission", "");
             List<String> commands = section.getStringList("Commands");
             List<String> successMsg = section.getStringList("Success");
             List<String> failMsg = section.getStringList("Fail");
+            if (!player.hasPermission(permission)) continue;
             if (config.getBoolean("Special.Item.Enable", false)) {
                 List<String> items = config.getStringList("Special.Item.List");
                 for (String item : items) {
@@ -58,12 +60,12 @@ public class CommandGroup {
             }
             double randomChance = random.nextDouble();
             if (chance >= randomChance * 100) {
-                if (commands.isEmpty()) continue;
+                if (commands == null) continue;
                 for (String command : commands) CommandUtil.commands(player, command);
-                if (successMsg.isEmpty()) continue;
+                if (successMsg == null) continue;
                 for (String success : successMsg) SpecialUtil.actions(player, success);
             } else {
-                if (failMsg.isEmpty()) continue;
+                if (failMsg == null) continue;
                 for (String fail : failMsg) SpecialUtil.actions(player, fail);
             }
         }

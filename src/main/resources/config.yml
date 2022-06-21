@@ -1,14 +1,20 @@
 #具体的指令
 #可无限增加
 CommandGroup:
+  #指令组id
   #例子
   Example:
     #几率
     Chance: 50
+    Permission: ''
     #执行的指令
     # op 以op身份运行
     # console 以控制台身份运行
     # player 以玩家身份运行
+    #可以使用延时
+    #例子:
+    #[op]heal <player>:20
+    # 20 代表着延时 1s
     Commands:
       - '[op]heal <player>'
     #成功时发送的信息 [不要可以直接删掉]

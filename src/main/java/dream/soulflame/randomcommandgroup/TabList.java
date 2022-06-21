@@ -1,10 +1,12 @@
 package dream.soulflame.randomcommandgroup;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public enum TabList {
-    FIRST_ARG(Arrays.asList("help","run","reload"),0,null,new int[]{1});
+    FIRST_ARG(Arrays.asList("help","run","reload"),0,null,new int[]{1}),
+    RUN_CHILDREN(Collections.singletonList("要执行指令组的玩家 指令组id"),1,"run",new int[]{2});
     private final List<String> list;//返回的List
     private final int[] num;//这个参数可以出现的位置
     private final int befPos;//识别的上个参数的位置
